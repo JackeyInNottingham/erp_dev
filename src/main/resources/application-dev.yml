@@ -5,4 +5,12 @@ server:
 
 mybatis:
   mapper-locations: classpath:/mapper/*Mapper.xml
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/erp_jssb?useSSL=false&characterEncoding=utf-8
+      username: root
+      password: jyf940621/
 
