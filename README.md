@@ -5,6 +5,5 @@
 后端：springboot+mybatis
 前端：Bootstrap+jQuery
 
-2020/11/09
 
 首先进行环境搭建和登录界面的开发
