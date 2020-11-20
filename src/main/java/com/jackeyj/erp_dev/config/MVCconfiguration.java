@@ -1,10 +1,7 @@
 package com.jackeyj.erp_dev.config;
 
 import org.springframework.context.annotation.Configuration;
-import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
-import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
-import org.springframework.web.servlet.config.annotation.ViewResolverRegistry;
-import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
+import org.springframework.web.servlet.config.annotation.*;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
 /**
@@ -13,7 +10,6 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
  */
 @Configuration
 public class MVCconfiguration implements WebMvcConfigurer {
-
 
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
@@ -28,5 +24,10 @@ public class MVCconfiguration implements WebMvcConfigurer {
     @Override
     public void configureViewResolvers(ViewResolverRegistry registry) {
         registry.viewResolver(new InternalResourceViewResolver());
+    }
+
+    @Override
+    public void addViewControllers(ViewControllerRegistry registry) {
+        registry.addViewController("/").setViewName("forward:/sys/login");
     }
 }
