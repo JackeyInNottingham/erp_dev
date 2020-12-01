@@ -2,16 +2,16 @@ server:
   port: 8080
   servlet:
     context-path: /
-    session:
-      timeout: 600000
 
 mybatis:
   mapper-locations: classpath:/mapper/*Mapper.xml
+  type-aliases-package: classpath:com/jackeyj/erp_dev/entity
 spring:
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
-    druid:
-      driver-class-name: com.mysql.cj.jdbc.Driver
-      url: jdbc:mysql://localhost:3306/erp_jssb?useSSL=false&characterEncoding=utf-8
-      username: root
-      password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/erp_jssb?characterEncoding=utf-8
+    username: root
+    password: 123456
+  application:
+    name: erp-dev
